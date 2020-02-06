@@ -74,3 +74,7 @@ Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (64 cores total)
 
 376GB RAM
 
+### Acknowledgements
+
+We thank  Yuliya Marchetti for providing the sea-surface temperature data set, Bohai Zhang for providing the MATLAB code for the implementation of the FSA, Matt Moores for general discussions on improving MCMC mixing, and Quan Vu for providing comments on an early version of this manuscript. AZM was supported by the Australian Research Council (ARC) Discovery Early Career Research Award, DE180100203.
+
