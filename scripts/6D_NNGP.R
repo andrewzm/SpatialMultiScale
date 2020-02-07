@@ -14,7 +14,7 @@ cache_folder <- readLines("cache_folder.txt")
 
 ## Load data
 y_tot <- read.csv(file.path(cache_folder, "y_tot.csv"))
-y_tot <- read.csv(file.path(cache_folder, "y_pred.csv"))
+y_pred <- read.csv(file.path(cache_folder, "y_pred.csv"))
 
 ## Fix seed
 set.seed(1)
