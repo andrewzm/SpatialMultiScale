@@ -33,7 +33,7 @@ proc_time_NNGP <- system.time({
                            X.0 = matrix(1, nrow(y_pred), 1),
                            coords.0 = as.matrix(y_pred[c("lon", "lat")]),
                            n.neighbors = 15,
-                           n.omp.threads = 30,
+                           n.omp.threads = 10,
                            cov.model = "matern")})
 
 ## Add to data frame
@@ -58,5 +58,5 @@ ConjNNGP$sigma.sq.hat
 ## alpha = tau^2/sigma^2. We can use this to find the estimated 
 ## measurement-error variance
 alpha <- ConjNNGP$theta.alpha[2]
-alpha * sigma2hat
+alpha * ConjNNGP$sigma.sq.hat
 ## 0.091
