@@ -34,7 +34,7 @@ R 3.6.1
 
   xtable_1.8-4        verification_1.42   dtw_1.21-3
    proxy_0.4-23        CircStats_0.2-6     MASS_7.3-51.4
-   boot_1.3-22         tidyr_1.0.0         spNNGP_0.1.3
+   boot_1.3-22         tidyr_1.0.0         spNNGP_0.1.1
   RANN_2.6.1          Formula_1.2-3       coda_0.19-3
   LatticeKrig_8.4     FRK_0.2.2           gridExtra_2.3
   spam64_2.5-1        gtools_3.8.1        futile.logger_1.4.3
