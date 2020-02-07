@@ -139,4 +139,4 @@ for(i in 1:nchunks) {
 }
 
 ## Save results to disk
-save(y_pred, file.path(cache_folder, "SPDE1-indep_output.rda"))
+save(y_pred, file = file.path(cache_folder, "SPDE1-indep_output.rda"))
