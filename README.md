@@ -9,7 +9,7 @@ The two figures below depict the global SST prediction (left) and prediction sta
 
 <div class="row">
   <div class="column">
-    <img src="img/Ypredcombined.png" alt="Predictions" style="width:100%">
+    <img src="img/Ypredcombined_Global.png" alt="Predictions" style="width:100%">
   </div>
 </div>
 
@@ -17,6 +17,13 @@ The two figures below depict the global SST prediction (left) and prediction sta
 ## Instructions
 
 To reproduce the results of Section 5 in the manuscript please download this repository and then create a local folder on your machine (e.g., ~/cache) which will sort all the intermediate computations and the results. IMPORTANT: Change the "cache_folder.txt" file in the scripts/ folder to identify the folder you have just created. Then set your working directory to the "scripts" folder. and cycle through the R sripts in the "scripts" folder in numerical order. The code populates the img/ directory, as well as the local directory (e.g., ~/cache) which you created earlier with images and intermediate quantities.
+
+## Other Material
+
+1. To view predictions and prediction uncertaintes in the Brazil-Malvinas confluence zone click [here](img/Ypredcombined_Brazil.png).
+
+2. Click to view trace plots of [log(σ<sub>0</sub>)](img/traces_logsigma0.png), [log(ρ<sub>0</sub>)](img/traces_logrho0.png), [θ<sub>σ<sub>1</sub></sub>](img/traces_logsigma1.png), [θ<sub>ρ<sub>1</sub></sub>](img/traces_logrho1.png), and [θ<sub>ε</sub>](img/traces_logsigma_eps.png).
+
 
 ## Abstract
 
