@@ -20,7 +20,7 @@ To reproduce the results of Section 5 in the manuscript please download this rep
 
 ## Other Material
 
-1. To view predictions and prediction uncertaintes in the Brazil-Malvinas confluence zone click [here](img/Ypredcombined_Brazil.png).
+1. To view predictions and prediction uncertaintes in the Brazil-Malvinas confluence zone click [here](img/Ypredcombined_Malvinas.png).
 
 2. Click to view trace plots of [log(σ<sub>0</sub>)](img/traces_logsigma0.png), [log(ρ<sub>0</sub>)](img/traces_logrho0.png), [θ<sub>σ<sub>1</sub></sub>](img/traces_logsigma1.png), [θ<sub>ρ<sub>1</sub></sub>](img/traces_logrho1.png), and [θ<sub>ε</sub>](img/traces_logsigma_eps.png).
 
