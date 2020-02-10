@@ -77,7 +77,7 @@ y_pred_all <- left_join(y_pred_all, FSA_pred)
 ## sigma2:5.2529,phi:3.0625,nu: 1.0000, nugget:0.1058,MSPE:0.12584
 
 ## Two-scale GMRF
-load(file = file.path(cache_folder, "TwoGMRF_output.rda"))
+load(file = file.path(cache_folder, "SPDE2_output.rda"))
 y_pred_all <- cbind(y_pred_all, dplyr::select(y_pred, TwoGMRF_pred, TwoGMRF_se_obs))
 
 ## There are some few (5 in all) NAs from SPDE1-indep, remove these
@@ -86,7 +86,7 @@ y_pred_all <- y_pred_all[-rmidx, ]
 
 ## Now we find the indices for Z_v^(2)
 ## Note: This takes a long time to compute
-if(!file.exists(file.path(cache_folder, "idx_0_5_box_val.rda"))) {
+if(!file.exists(file.path(cache_folder, "idx_0_75_box_val.rda"))) {
     
   ## Do this in batches of 1000
   batches <- cut(1 : nrow(y_pred_all), 
@@ -100,8 +100,8 @@ if(!file.exists(file.path(cache_folder, "idx_0_5_box_val.rda"))) {
     idx_logical[this_idx] <- (mclapply(this_idx,#nrow(y_pred_all),
                                function(i) {
                                  thisy <- y_pred_all[i, ]
-                                 ysub <- filter(y_tot, lon < thisy$lon + 0.5 & lon > thisy$lon - 0.5 &
-                                                  lat < thisy$lat + 0.5 & lat > thisy$lat - 0.5 )
+                                 ysub <- filter(y_tot, lon < thisy$lon + 0.75 & lon > thisy$lon - 0.75 &
+                                                  lat < thisy$lat + 0.75 & lat > thisy$lat - 0.75)
                                  
                                  ## If there are no data points then add this to Z_v^(2)
                                  ifelse(nrow(ysub) == 0, TRUE, FALSE)
@@ -112,9 +112,9 @@ if(!file.exists(file.path(cache_folder, "idx_0_5_box_val.rda"))) {
   idx <- which(idx_logical)
 
   ## Save the indices of the data points for Z_v^(2)
-  save(idx, file = file.path(cache_folder, "idx_0_5_box_val.rda"))
+  save(idx, file = file.path(cache_folder, "idx_0_75_box_val.rda"))
 } else {
-  load(file = file.path(cache_folder, "idx_0_5_box_val.rda"))
+  load(file = file.path(cache_folder, "idx_0_75_box_val.rda"))
 }
 
 ## Now find those validation data inside the 8 x 8 box in the Pacific Ocean for Z_v^(3)

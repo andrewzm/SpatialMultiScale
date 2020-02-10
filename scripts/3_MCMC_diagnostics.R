@@ -97,8 +97,8 @@ logsigma_eps_ess <- compute_neff(logsigma_eps[samp_num, ])
 cat("Median effective sample sizes: \n")
 cat("eta0: "); cat(median(eta0_ess)); cat("\n")
 cat("eta1: "); cat(median(eta1_ess)); cat("\n")
-cat("logsigma0: "); cat(median(logsigma0_ess)); cat("\n")
-cat("logrho0: "); cat(median(logrho0_ess)); cat("\n")
+cat("logsigma0: "); cat(logsigma0_ess); cat("\n")
+cat("logrho0: "); cat(logrho0_ess); cat("\n")
 cat("logsigma1: "); cat(median(logsigma1_ess)); cat("\n")
 cat("logrho1: "); cat(median(logrho1_ess)); cat("\n")
 cat("logsigma_eps: "); cat(median(logsigma_eps_ess)); cat("\n")
@@ -121,9 +121,7 @@ ngridpts <- nrow(base_map1$grid_data)
 zsamp0 <- zsamp1 <- zsamp <- 
     matrix(0, N_thinned, ngridpts)
   
-pb <- txtProgressBar(min = 1, max = N_thinned, style = 3)
 for (i in 1:N_thinned) {
-  setTxtProgressBar(pb, i)
   zsamp_mat0 <- inla.mesh.project(proj0, field = eta0[i, ])
   zsamp_mat1 <- inla.mesh.project(proj1, field = eta1[i, ])
   zsamp_mat <- zsamp_mat0 + zsamp_mat1
@@ -132,7 +130,6 @@ for (i in 1:N_thinned) {
   zsamp1[i, ] <- reshape2::melt(zsamp_mat1)[,3]
   zsamp[i, ] <- reshape2::melt(zsamp_mat)[,3]
 }
-close(pb)
 
 ## Remove all the land pixels
 land_pixels <- which(apply(zsamp, 2, function(x) any(is.na(x))))
