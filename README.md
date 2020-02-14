@@ -18,7 +18,7 @@ The two figures below depict the global SST prediction (left) and prediction sta
 
 To reproduce the results of Section 5 in the manuscript please download this repository and then create a local folder on your machine (e.g., ~/cache) which will sort all the intermediate computations and the results. IMPORTANT: Change the "cache_folder.txt" file in the scripts/ folder to identify the folder you have just created. Then set your working directory to the "scripts" folder. and cycle through the R sripts in the "scripts" folder in numerical order. The code populates the img/ directory, as well as the local directory (e.g., ~/cache) which you created earlier with images and intermediate quantities.
 
-## Other Material
+## Additional Material
 
 1. To view predictions and prediction uncertaintes in the Brazil-Malvinas confluence zone click [here](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/Ypredcombined_Malvinas.png).
 
