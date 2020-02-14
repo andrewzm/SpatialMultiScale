@@ -60,13 +60,14 @@ logsigma_eps <- hyp_samp_log_sigma_eps
 
 
 ## Plot all the trace plots. Most appear OK.
-plot_par_traces <- function(obj, fname, panels = c(1, 1), ylab = NULL) {
+plot_par_traces <- function(obj, fname, panels = c(1, 1), 
+                            ylab = NULL, labels = (1 : ncol(obj))) {
   png(paste0("../img/", fname), width = panels[2] * 750, 
       height = panels[1] * 750, res = 150)
   par(mfrow = panels)
   ess <- rep(0, ntheta)
   for(i in 1 : ncol(obj))  
-    plot(obj[, i], type = 'l', main = i, xlab = "Itreation", ylab = ylab)
+    plot(obj[, i], type = 'l', main = labels[i], xlab = "Itreation", ylab = ylab)
   dev.off()
 }
 
@@ -162,6 +163,10 @@ dev.off()
 
 ## Plot a couple of traces just to show lack of autocorrelation
 par(mfrow = c(2,2))
-for (i in sample(1:ncol(zsamp_sea), 4L)) 
+Yidx <- sample(1:ncol(zsamp_sea), 200L)
+zsamp_sea_sub <- zsamp_sea[, Yidx]
+plot_par_traces(zsamp_sea_sub[, , drop = FALSE], "traces_Y.png",
+                ylab = expression(Y), labels = Yidx, panels = c(20, 10))
+for (i in sample(1:ncol(zsamp_sea), 200L)) 
   plot(zsamp_sea[, i], type = 'l', ylab = paste0("Y", i))
 

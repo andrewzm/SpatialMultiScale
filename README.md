@@ -24,7 +24,7 @@ To reproduce the results of Section 5 in the manuscript please download this rep
 
 2. To view predictions in the Brazil-Malvinas confluence zone at the two different scales click [here](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/Ypred_sep_scales_Malvinas.png).
 
-3. Click to view trace plots of [log(σ<sub>0</sub>)](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma0.png), [log(ρ<sub>0</sub>)](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logrho0.png), [θ<sub>σ<sub>1</sub></sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma1.png), [θ<sub>ρ<sub>1</sub></sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logrho1.png), and [θ<sub>ε</sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma_eps.png).
+3. Click to view trace plots of [Y(·)](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_Y.png) at 200 random locations (already thinned),  [log(σ<sub>0</sub>)](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma0.png), [log(ρ<sub>0</sub>)](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logrho0.png), [θ<sub>σ<sub>1</sub></sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma1.png), [θ<sub>ρ<sub>1</sub></sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logrho1.png), and [θ<sub>ε</sub>](https://raw.githubusercontent.com/andrewzm/SpatialMultiScale/master/img/traces_logsigma_eps.png).
 
 
 ## Abstract
